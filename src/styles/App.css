@@ -1,1 +1,29 @@
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 20px;  
+}  
 
+.tabs {  
+    display: flex;  
+    gap: 10px;  
+    margin-bottom: 20px;  
+}  
+
+.tab-content {  
+    display: none;  
+}  
+
+.posts-list, #notificationsList {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+button {  
+    margin-top: 10px;  
+}  
+
+.post {  
+    border: 1px solid #ccc;  
+    padding: 10px;  
+    margin-bottom: 10px;  
+}  
