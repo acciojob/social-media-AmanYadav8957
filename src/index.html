@@ -1,12 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>React Boilerplate</title>
-</head>
-<body>
-<div id="root">
-</div>
-</html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Social Media App for Authors</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="tabs">  
+            <button onclick="showTab('home')">Home</button>  
+            <button onclick="showTab('users')">Users</button>  
+            <button onclick="showTab('notifications')">Notifications</button>  
+            <button onclick="showTab('createPost')">Create Post</button>  
+        </div>  
+        
+        <div id="home" class="tab-content">  
+            <h2>Recent Posts</h2>  
+            <div class="posts-list" id="postsList"></div>  
+        </div>  
+        
+        <div id="users" class="tab-content" style="display:none;">  
+            <h2>Users</h2>  
+            <ul id="userList"></ul>  
+        </div>  
+        
+        <div id="notifications" class="tab-content" style="display:none;">  
+            <h2>Notifications</h2>  
+            <ul id="notificationsList"></ul>  
+            <button class="button" onclick="refreshNotifications()">Refresh Notifications</button>  
+        </div>  
+
+        <div id="createPost" class="tab-content" style="display:none;">  
+            <h2>Create Post</h2>  
+            <label for="postAuthor">Select Author:</label>  
+            <select id="postAuthor"></select>  
+            <br>  
+            <label for="postContent">Content:</label>  
+            <textarea id="postContent"></textarea>  
+            <br>  
+            <button onclick="createPost()">Post</button>  
+        </div>  
+    </div>  
+
+    <script src="script.js"></script>  
+</body>  
+</html>  
